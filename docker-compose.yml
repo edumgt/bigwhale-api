@@ -9,6 +9,13 @@ volumes:
   grafana_data:
 
 services:
+  whale-api:
+    container_name: whale-api
+    image: 8235e0f0b56b
+    ports:
+      - '8080:8080'
+    networks:
+      - aw-network
   prometheus:
     image: prom/prometheus:latest
     volumes:
